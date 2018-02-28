@@ -1,6 +1,6 @@
 
 cmake_minimum_required(VERSION 2.8)
-project(uff2plan)
+project(nn2plan)
 
 # setup tensorRT flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")	# -std=gnu++11
@@ -36,8 +36,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_OUTPUT_DIR}/bin)
 include_directories(${PROJECT_INCLUDE_DIR} ${GIE_PATH}/include)
 #include_directories(/usr/include/gstreamer-1.0 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/include /usr/include/glib-2.0 /usr/include/libxml2 /usr/lib/aarch64-linux-gnu/glib-2.0/include/)
 
-file(GLOB uff2planSources *.cpp)
-file(GLOB uff2planIncludes *.h)
+file(GLOB nn2planSources *.cpp)
+file(GLOB nn2planIncludes *.h)
 
-cuda_add_executable(uff2plan ${uff2planSources})
-target_link_libraries(uff2plan nvcaffe_parser nvinfer)
+cuda_add_executable(nn2plan ${nn2planSources})
+target_link_libraries(nn2plan nvcaffe_parser nvparsers nvinfer)
