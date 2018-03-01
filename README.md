@@ -1,7 +1,7 @@
 # nn2plan
 A tool to optimize a neural network and generate the plan for TensorRT
 
-## Example1: generate a plan from caffe model
+## Example1: generate a plan from a caffe model
 Download the pretrained model and prototxt
 ```
 wget --no-check-certificate 'https://nvidia.box.com/shared/static/3qdg3z5qvl8iwjlds6bw7bwi2laloytu.gz' -O DetectNet-COCO-Dog.tar.gz
